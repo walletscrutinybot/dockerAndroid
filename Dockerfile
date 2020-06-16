@@ -25,3 +25,5 @@ RUN mkdir -p /opt/android-sdk/cmdline-tools && \
   mv *.jar apktool.jar && \
   mv apktool apktool.jar /usr/local/bin/ && \
   chmod +x /usr/local/bin/apktool /usr/local/bin/apktool.jar
+# following https://github.com/Microsoft/vscode-arduino/issues/644#issuecomment-415329398
+RUN rm /etc/java-8-openjdk/accessibility.properties
