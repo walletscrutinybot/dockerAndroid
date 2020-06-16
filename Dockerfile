@@ -15,5 +15,12 @@ RUN mkdir -p /opt/android-sdk/cmdline-tools && \
   cd /opt/android-sdk/cmdline-tools && \
   wget -q https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip && \
   unzip *.zip && \
+  rm -f *.zip && \
   yes | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager --licenses && \
-  /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "build-tools;28.0.3"
+  /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "build-tools;28.0.3" && \
+  ln -s /opt/android-sdk/build-tools/28.0.3/apksigner /usr/bin/apksigner && \
+  wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool && \
+  wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar && \
+  mv *.jar apktool.jar && \
+  mv apktool{,.jar} /usr/local/bin/ && \
+  chmod +x /usr/local/bin/apktool{,.jar}
