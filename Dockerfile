@@ -18,8 +18,8 @@ RUN mkdir -p /opt/android-sdk/cmdline-tools && \
   rm -f *.zip && \
   ln -s /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager /usr/bin/sdkmanager && \
   yes | sdkmanager --licenses && \
-  sdkmanager "build-tools;28.0.3" && \
-  ln -s /opt/android-sdk/build-tools/28.0.3/apksigner /usr/bin/apksigner && \
+  sdkmanager "build-tools;29.0.3" && \
+  ln -s /opt/android-sdk/build-tools/29.0.3/apksigner /usr/bin/apksigner && \
   wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool && \
   wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar && \
   mv *.jar apktool.jar && \
