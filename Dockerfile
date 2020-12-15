@@ -1,9 +1,9 @@
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 
 RUN apt-get update && \
   apt-get install -y wget \
-    openjdk-8-jre-headless=8u252-b09-1~19.10 \
-    openjdk-8-jdk-headless=8u252-b09-1~19.10 \
+    openjdk-8-jre-headless=8u275-b01-0ubuntu1~20.04 \
+    openjdk-8-jdk-headless=8u275-b01-0ubuntu1~20.04 \
     git unzip && \
   rm -rf /var/lib/apt/lists/* && \
   apt-get autoremove -y && \
